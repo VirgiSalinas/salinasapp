@@ -1,0 +1,108 @@
+.wrapper {
+  display: grid;
+  gap: 40px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  padding: 30px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.specialty {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.content {
+  padding: 30px;
+}
+
+.matricula {
+  font-size: 13px;
+  color: #8b8b94;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.presencial {
+  background-color: #e0edff;
+  color: #2563eb;
+}
+
+.virtual {
+  background-color: #e6f7f1;
+  color: #059669;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #b0b0b5;
+  margin-bottom: 10px;
+}
+
+.obras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.obraItem {
+  padding: 6px 12px;
+  background: #f2f2f5;
+  border-radius: 999px;
+  font-size: 12px;
+  color: #555;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  border-radius: 14px;
+  background: #B7E5CD;
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}

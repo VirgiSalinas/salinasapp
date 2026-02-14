@@ -1,0 +1,141 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #ececf0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+.logo img {
+  height: 45px;
+  width: 50px;
+  object-fit: contain;
+}
+
+/* MENU */
+
+.menu {
+  display: flex;
+  gap: 35px;
+}
+
+.menuItem {
+  position: relative;
+  padding-top: 28px;
+  margin-top: -28px;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease;
+  padding: 0;
+}
+
+.menuButton:hover {
+  color: #111;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background: white;
+  border-radius: 18px;
+  padding: 12px 0;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f3;
+
+  margin-top: 0;
+  
+  opacity: 0;
+  transform: translateX(-50%) translateY(-10px);
+  animation: dropdownFade 0.2s ease forwards;
+}
+
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: transparent;
+}
+
+@keyframes dropdownFade {
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.dropdownItem {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #555;
+  transition: all 0.2s ease, 
+}
+
+.dropdownItem:hover {
+  background: #f5f5f7;
+  padding-left: 24px;
+  color: #111;
+}
+
+.menuButton::after {
+  content: '▼';
+  font-size: 9px;
+  margin-left: 6px;
+  opacity: 0.5;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.menuItem:hover .menuButton::after {
+  transform: rotate(180deg);
+}
+
+.dropdownItem:first-child {
+  border-radius: 18px 18px 0 0;
+}
+
+.dropdownItem:last-child {
+  border-radius: 0 0 18px 18px;
+}

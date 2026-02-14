@@ -1,4 +1,4 @@
-import { CiCalendarDate } from "react-icons/ci";
+/*import { CiCalendarDate } from "react-icons/ci";
 const CartWidget = ()=>{
     return(
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -8,4 +8,4 @@ const CartWidget = ()=>{
     )
 }
 
-export default CartWidget
+export default CartWidget*/

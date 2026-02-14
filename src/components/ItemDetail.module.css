@@ -1,0 +1,276 @@
+/* contenedor */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* volver */
+.backLink {
+  color: #2563EB;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  align-self: flex-start;
+  max-width: 500px;
+  width: 100%;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: #1E40AF;
+  text-decoration: underline;
+}
+
+/* card principal */
+.card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 10px 40px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  width: 100%;
+  height: 500px;
+  max-width: 500px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* header */
+.header {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.nombre {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #0F172A;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.especialidad {
+  font-size: 1rem;
+  color: #64748B;
+  margin: 0 0 0.75rem 0;
+  font-weight: 500;
+}
+
+.matricula {
+  font-size: 0.875rem;
+  color: #94A3B8;
+  margin: 0;
+  font-weight: 400;
+}
+
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #E2E8F0 20%,
+    #E2E8F0 80%,
+    transparent
+  );
+  margin: 1rem 0;
+}
+
+/* info grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94A3B8;
+}
+
+
+/* obras sociales */
+.obrasSociales {
+  margin-bottom: 1rem;
+}
+
+.obrasSociales .label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.obrasGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.obraBadge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #F0F9FF;
+  color: #0369A1;
+  border: 1px solid #BAE6FD;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.obraBadge:hover {
+  background: #E0F2FE;
+  border-color: #7DD3FC;
+  transform: translateY(-1px);
+}
+
+/* contador */
+.counterSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.counterSection .label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.counterBtn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #E2E8F0;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #0F172A;
+  font-size: 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counterBtn:hover:not(:disabled) {
+  border-color: #2563EB;
+  color: #2563EB;
+  transform: scale(1.05);
+}
+
+.counterBtn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.counterBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.counterValue {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #0F172A;
+  min-width: 3rem;
+  text-align: center;
+}
+
+.counterHint {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* boton agendar */
+.btnAgendar {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  display: block;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 12px rgba(37, 99, 235, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btnAgendar:hover {
+  background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 20px rgba(37, 99, 235, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.btnAgendar:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 8px rgba(37, 99, 235, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.4s ease-out;
+}
+
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563EB, #22C55E);
+  border-radius: 16px 16px 0 0;
+}
+
+.card {
+  position: relative;
+}
