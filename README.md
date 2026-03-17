@@ -102,13 +102,6 @@ export const db = getFirestore(app);
 
 ---
 
-## 🌐 Versión online
-
-Podés ver el proyecto funcionando en el siguiente link:
-
-👉 *(Agregar link de deploy — por ejemplo Vercel o Netlify)*
-
----
 
 ## 📚 Librerías utilizadas
 
