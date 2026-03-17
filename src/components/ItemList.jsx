@@ -1,13 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./ItemList.module.css";
 
-         // <div className={styles.imageWrapper}>
-          //  <img
-          //    src={medico.img}
-          //    alt={medico.nombre}
-          //    className={styles.image}
-          //  />
-          //</div>
 const ItemList = ({ medicos }) => {
   return (
     <div className={styles.wrapper}>

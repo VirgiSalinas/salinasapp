@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-//import { getMedicos, getMedicosByCategory } from "../mock/asyncMock";
 import ItemList from "../components/ItemList";
 import styles from "./ItemListContainer.module.css";
 import { addDoc, collection, collectionGroup, getDoc, getDocs, query, where } from "firebase/firestore";
 import { db } from "../service/firebase";
-//import { medicos as medicosMock} from "../mock/asyncMock";
 
 const ItemListContainer = () => {
   const [medicos, setMedicos] = useState([]);
@@ -16,14 +14,12 @@ const ItemListContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    //conectar a nuestra coleccion
     const medicosCollection = categoryId
     ? query(
       collection(db, "medicos"),
       where("category", "==", categoryId)
     )
     : collection(db, "medicos");
-    //pedir docs
     getDocs(medicosCollection)
     .then((res)=>{
       const list = res.docs.map((doc) => ({
@@ -40,20 +36,7 @@ const ItemListContainer = () => {
     .finally(()=>{
       setLoading(false);
     });
-
-    //const fetchPromise = categoryId
-    //  ? getMedicosByCategory(categoryId)
-    //  : getMedicos();
-//
-   // fetchPromise
-    //  .then((data) => {
-    //    setMedicos(data);
-    //    setLoading(false);
-    //  })
-   //   .catch((error) => {
-   //     console.error("Error al cargar médicos:", error);
-   //     setLoading(false);
-   //   });
+   
   }, [categoryId]);
 
   if (loading) {
@@ -82,24 +65,7 @@ const ItemListContainer = () => {
         </div>
       </div>
     );
-  }
-
-
-  //subir los datos
-  //const subirDataAFirebase = async ()=>{
-  //  try {
-  //    const medicosCollection = collection(db,"medicos");
-  //    const promises = medicosMock.map((medico) => 
- //       addDoc(medicosCollection, medico)
- //   );
-//
- //     await Promise.all(promises);
- //     console.log("Datos subidos correctamente");
- //   } catch(error){
- //     console.error("Error al subir data;", error);
- //   }
-//    
- // };
+  } 
 
 
   return (

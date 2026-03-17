@@ -1,13 +1,11 @@
 import { createContext, useState } from "react";
+import Checkout from "../components/CheckOut";
 
-// 1️⃣ DEFINIR EL CONTEXTO
 export const CartContext = createContext();
 
-// 2️⃣ DECLARAR EL PROVEEDOR
 export const CartProvider = ({ children }) => {
     const [turnos, setTurnos] = useState([]);
 
-    // 📌 FUNCIONES DEL CONTEXTO
 
     
     const addTurno = (turno) => {

@@ -38,7 +38,6 @@
   object-fit: contain;
 }
 
-/* MENU */
 
 .menu {
   display: flex;
@@ -66,7 +65,6 @@
   color: #111;
 }
 
-/* DROPDOWN */
 
 .dropdown {
   position: absolute;

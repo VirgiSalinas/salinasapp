@@ -1,4 +1,3 @@
-/*  CONTENEDOR PRINCIPAL */
 .container {
   min-height: 100vh;
   background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
@@ -14,7 +13,6 @@
   letter-spacing: -0.02em;
 }
 
-/*  LISTA DE TURNOS */
 .turnosList {
   max-width: 900px;
   margin: 0 auto 2rem;
@@ -23,7 +21,6 @@
   gap: 1.5rem;
 }
 
-/* CARD DE CADA TURNO */
 .turnoCard {
   background: #FFFFFF;
   border-radius: 16px;
@@ -45,7 +42,6 @@
     0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
-/*  INFO DEL MÉDICO */
 .medicoInfo {
   display: flex;
   flex-direction: column;
@@ -71,7 +67,6 @@
   margin: 0;
 }
 
-/*  INFO DEL TURNO */
 .turnoInfo {
   display: flex;
   flex-direction: column;
@@ -97,7 +92,6 @@
   font-weight: 500;
 }
 
-/*  BOTÓN ELIMINAR */
 .btnEliminar {
   width: 36px;
   height: 36px;
@@ -124,7 +118,6 @@
   transform: scale(0.95);
 }
 
-/* RESUMEN */
 .summary {
   max-width: 900px;
   margin: 0 auto 2rem;
@@ -142,7 +135,6 @@
   font-size: 1.5rem;
 }
 
-/*  ACCIONES */
 .actions {
   max-width: 900px;
   margin: 0 auto;
@@ -152,7 +144,6 @@
   gap: 1.5rem;
 }
 
-/* Cancelar todos*/
 .btnDanger {
   padding: 0.875rem 2rem;
   background: #DC2626;
@@ -175,7 +166,6 @@
   transform: translateY(0);
 }
 
-/* Confirmar */
 .btnSuccess {
   padding: 0.875rem 2rem;
   background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
@@ -205,7 +195,6 @@
   transform: translateY(0);
 }
 
-/*  ESTADO VACÍO */
 .empty {
   max-width: 500px;
   margin: 4rem auto;
@@ -243,7 +232,6 @@
   transform: translateY(-2px);
 }
 
-/* ANIMACIÓN DE ENTRADA */
 @keyframes fadeInUp {
   from {
     opacity: 0;

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-//import { getMedicoById } from '../mock/asyncMock';
 import ItemDetail from '../components/ItemDetail';
 import styles from './ItemDetailContainer.module.css';
 import { doc, getDoc } from 'firebase/firestore';
@@ -36,7 +35,6 @@ const ItemDetailContainer = () => {
 
 }, [id]);
 
-// ESTADO DE CARGA
 if (loading) {
   return (
     <div className={styles.loadingContainer}>
@@ -48,7 +46,6 @@ if (loading) {
   );
 }
 
-// MÉDICO NO ENCONTRADO
 if (!medico) {
   return (
     <div className={styles.errorContainer}>
@@ -66,7 +63,6 @@ if (!medico) {
   );
 }
 
-// RENDERIZADO NORMAL
 return <ItemDetail medico={medico} />;
 };
 

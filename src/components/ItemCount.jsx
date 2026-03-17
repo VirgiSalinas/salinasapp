@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./ItemDetail.module.css"; // reutilizamos tus estilos
+import styles from "./ItemDetail.module.css"; 
 
 const ItemCount = ({ stock = 10, onAdd }) => {
 
@@ -10,7 +10,6 @@ const ItemCount = ({ stock = 10, onAdd }) => {
 
   return (
     <>
-      {/* Contador */}
       <div className={styles.counterSection}>
         <span className={styles.label}>Cantidad de turnos</span>
 
@@ -39,7 +38,6 @@ const ItemCount = ({ stock = 10, onAdd }) => {
         </p>
       </div>
 
-      {/* Botón */}
       <button
         onClick={() => onAdd(cantidad)}
         className={styles.btnAgendar}

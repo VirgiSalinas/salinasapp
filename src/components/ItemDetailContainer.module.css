@@ -1,4 +1,3 @@
-/* 🔄 ESTADO DE CARGA */
 .loadingContainer {
   min-height: 100vh;
   background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
@@ -12,7 +11,6 @@
   text-align: center;
 }
 
-/* Spinner animado */
 .spinner {
   width: 56px;
   height: 56px;
@@ -37,7 +35,6 @@
   margin: 0;
 }
 
-/* ❌ ESTADO DE ERROR (No encontrado) */
 .errorContainer {
   min-height: 100vh;
   background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
@@ -110,7 +107,6 @@
     0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
-/* 🎨 ANIMACIONES */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -126,36 +122,7 @@
   animation: fadeIn 0.4s ease-out;
 }
 
-/* 📱 RESPONSIVE */
-@media (max-width: 640px) {
-  .errorContent {
-    padding: 2.5rem 1.5rem;
-  }
 
-  .errorIcon {
-    font-size: 3.5rem;
-  }
-
-  .errorTitle {
-    font-size: 1.35rem;
-  }
-
-  .errorMessage {
-    font-size: 0.9rem;
-  }
-
-  .spinner {
-    width: 48px;
-    height: 48px;
-    border-width: 3px;
-  }
-
-  .loadingText {
-    font-size: 0.9rem;
-  }
-}
-
-/* ✨ PULSO SUTIL EN EL SPINNER */
 @keyframes pulse {
   0%, 100% {
     opacity: 1;

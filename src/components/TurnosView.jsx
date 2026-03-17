@@ -6,7 +6,6 @@ import styles from './TurnosView.module.css';
 const TurnosView = () => {
   const { turnos, clearTurnos, removeTurno, totalTurnos } = useContext(CartContext);
 
-  // Si no hay turnos, mostrar mensaje vacío
   if (turnos.length === 0) {
     return (
       <div className={styles.container}>
@@ -25,18 +24,15 @@ const TurnosView = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>📅 Mis Turnos</h1>
 
-      {/* Lista de turnos */}
       <div className={styles.turnosList}>
         {turnos.map((turno) => (
           <div key={turno.id} className={styles.turnoCard}>
-            {/* Información del médico */}
             <div className={styles.medicoInfo}>
               <h3 className={styles.medicoNombre}>{turno.medico.nombre}</h3>
               <p className={styles.especialidad}>{turno.medico.especialidad}</p>
               <p className={styles.matricula}>Mat. N° {turno.medico.matricula}</p>
             </div>
 
-            {/* Información del turno */}
             <div className={styles.turnoInfo}>
               <div className={styles.infoItem}>
                 <span className={styles.label}>📅 Fecha:</span>
@@ -66,7 +62,6 @@ const TurnosView = () => {
               </div>
             </div>
 
-            {/* Botón eliminar */}
             <button
               className={styles.btnEliminar}
               onClick={() => removeTurno(turno.id)}
@@ -78,14 +73,12 @@ const TurnosView = () => {
         ))}
       </div>
 
-      {/* Resumen */}
       <div className={styles.summary}>
         <p className={styles.totalTurnos}>
           Total de turnos agendados: <strong>{totalTurnos()}</strong>
         </p>
       </div>
 
-      {/* Acciones */}
       <div className={styles.actions}>
         <button className={styles.btnDanger} onClick={clearTurnos}>
           Cancelar todos los turnos

@@ -5,6 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import NotFound from './components/NotFound';
 import { CartProvider } from './context/CartContext';
 import TurnosView from './components/TurnosView';
+import Checkout from './components/CheckOut';
 
 function App() {
   return (
@@ -15,27 +16,23 @@ function App() {
 
 
         <Routes>
-          {/* Ruta principal*/}
           <Route
             path="/"
             element={<ItemListContainer />}
           />
 
-          {/* Ruta con parámetro */}
 
           <Route
             path="/category/:categoryId"
             element={<ItemListContainer />}
           />
 
-          {/* Ruta de detalle */}
 
           <Route
             path="/item/:id"
             element={<ItemDetailContainer />}
           />
 
-          {/* Ruta 404 */}
           <Route
             path="*"
             element={<NotFound />}
@@ -44,7 +41,12 @@ function App() {
             path="/mis-turnos"
             element={<TurnosView />}
           />
+          <Route 
+          path="/confirmar-turnos" 
+          element={<Checkout />} 
+          />
         </Routes>
+
       </BrowserRouter>
     </CartProvider>
   );

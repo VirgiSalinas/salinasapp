@@ -5,7 +5,7 @@ import { CiCalendarDate } from "react-icons/ci";
 
 
 const CartWidget = () => {
-    // Obtener cantidad total de turnos del contexto
+    
     const { totalTurnos } = useContext(CartContext);
 
     return (
