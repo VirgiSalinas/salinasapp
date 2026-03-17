@@ -30,18 +30,17 @@
 .card {
   background: #FFFFFF;
   border-radius: 16px;
-  box-shadow: 
+  box-shadow:
     0 1px 3px rgba(0, 0, 0, 0.05),
     0 10px 40px rgba(0, 0, 0, 0.08);
-  padding: 1rem;
+  padding: 2.5rem;
   width: 100%;
-  height: 500px;
   max-width: 500px;
   transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 
+  box-shadow:
     0 1px 3px rgba(0, 0, 0, 0.08),
     0 20px 60px rgba(0, 0, 0, 0.12);
 }
@@ -49,7 +48,7 @@
 /* header */
 .header {
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .nombre {
@@ -77,22 +76,20 @@
 
 .divider {
   height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    #E2E8F0 20%,
-    #E2E8F0 80%,
-    transparent
-  );
-  margin: 1rem 0;
+  background: linear-gradient(to right,
+      transparent,
+      #E2E8F0 20%,
+      #E2E8F0 80%,
+      transparent);
+  margin: 2rem 0;
 }
 
 /* info grid */
 .infoGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .infoItem {
@@ -109,10 +106,17 @@
   color: #94A3B8;
 }
 
+.value {
+  font-size: 0.95rem;
+  color: #0F172A;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
 
 /* obras sociales */
 .obrasSociales {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .obrasSociales .label {
@@ -152,13 +156,13 @@
 
 .counterSection .label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .counter {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 0.75rem;
 }
 
@@ -223,7 +227,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 
+  box-shadow:
     0 4px 12px rgba(37, 99, 235, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
@@ -231,14 +235,14 @@
 .btnAgendar:hover {
   background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
   transform: translateY(-2px);
-  box-shadow: 
+  box-shadow:
     0 8px 20px rgba(37, 99, 235, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .btnAgendar:active {
   transform: translateY(0);
-  box-shadow: 
+  box-shadow:
     0 2px 8px rgba(37, 99, 235, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
@@ -249,6 +253,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -273,4 +278,184 @@
 
 .card {
   position: relative;
+}
+
+/* 🆕 SECCIÓN DE SELECCIÓN DE TURNO */
+.turnoSection {
+  margin-bottom: 2rem;
+}
+
+.turnoTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0F172A;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup .label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* 📅 INPUT DE FECHA */
+.dateInput {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #E2E8F0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #0F172A;
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.dateInput:hover {
+  border-color: #CBD5E1;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #2563EB;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* 🕐 GRID DE HORARIOS */
+.horariosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.horarioBtn {
+  padding: 0.875rem 1rem;
+  border: 2px solid #E2E8F0;
+  border-radius: 10px;
+  background: #FFFFFF;
+  color: #64748B;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.horarioBtn:hover {
+  border-color: #2563EB;
+  color: #2563EB;
+  background: #F0F9FF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.horarioBtn:active {
+  transform: translateY(0);
+}
+
+.horarioSelected {
+  border-color: #2563EB !important;
+  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow:
+    0 4px 12px rgba(37, 99, 235, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.horarioSelected:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 16px rgba(37, 99, 235, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* 🏥 SELECT DE OBRA SOCIAL */
+.selectInput {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #E2E8F0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #0F172A;
+  background: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 3rem;
+}
+
+.selectInput:hover {
+  border-color: #CBD5E1;
+}
+
+.selectInput:focus {
+  outline: none;
+  border-color: #2563EB;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.selectInput option {
+  padding: 0.75rem;
+  background: #FFFFFF;
+  color: #0F172A;
+}
+
+@keyframes inputFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inputGroup {
+  animation: inputFadeIn 0.3s ease-out;
+}
+
+.inputGroup:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.inputGroup:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.inputGroup:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+
+.actionSection {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.btnTurnos {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1c1c1c;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btnTurnos:hover {
+  background-color: #2e392f;
+  transform: translateY(-1px);
 }

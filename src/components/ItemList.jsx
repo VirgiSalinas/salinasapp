@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
 import styles from "./ItemList.module.css";
 
+         // <div className={styles.imageWrapper}>
+          //  <img
+          //    src={medico.img}
+          //    alt={medico.nombre}
+          //    className={styles.image}
+          //  />
+          //</div>
 const ItemList = ({ medicos }) => {
   return (
     <div className={styles.wrapper}>
       {medicos.map((medico) => (
         <div key={medico.id} className={styles.card}>
-          
+
+
           <div className={styles.header}>
             <h3 className={styles.name}>{medico.nombre}</h3>
             <p className={styles.specialty}>{medico.especialidad}</p>
@@ -18,11 +26,10 @@ const ItemList = ({ medicos }) => {
             </p>
 
             <span
-              className={`${styles.badge} ${
-                medico.modalidad === "Presencial"
-                  ? styles.presencial
-                  : styles.virtual
-              }`}
+              className={`${styles.badge} ${medico.modalidad === "Presencial"
+                ? styles.presencial
+                : styles.virtual
+                }`}
             >
               {medico.modalidad}
             </span>

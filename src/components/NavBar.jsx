@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -80,6 +81,7 @@ const NavBar = () => {
             </div>
           ))}
         </div>
+      <CartWidget/>
       </div>
     </nav>
   );

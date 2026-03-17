@@ -1,0 +1,264 @@
+/*  CONTENEDOR PRINCIPAL */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+  padding: 3rem 1.5rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0F172A;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/*  LISTA DE TURNOS */
+.turnosList {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* CARD DE CADA TURNO */
+.turnoCard {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 10px 40px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: 2rem;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.turnoCard:hover {
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/*  INFO DEL MÉDICO */
+.medicoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.medicoNombre {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0F172A;
+  margin: 0;
+}
+
+.especialidad {
+  font-size: 0.95rem;
+  color: #64748B;
+  margin: 0;
+}
+
+.matricula {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  margin: 0;
+}
+
+/*  INFO DEL TURNO */
+.turnoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748B;
+  min-width: 110px;
+}
+
+.value {
+  font-size: 0.95rem;
+  color: #0F172A;
+  font-weight: 500;
+}
+
+/*  BOTÓN ELIMINAR */
+.btnEliminar {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #FEE2E2;
+  color: #DC2626;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnEliminar:hover {
+  background: #DC2626;
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+.btnEliminar:active {
+  transform: scale(0.95);
+}
+
+/* RESUMEN */
+.summary {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.totalTurnos {
+  font-size: 1.25rem;
+  color: #0F172A;
+  margin: 0;
+}
+
+.totalTurnos strong {
+  color: #2563EB;
+  font-size: 1.5rem;
+}
+
+/*  ACCIONES */
+.actions {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Cancelar todos*/
+.btnDanger {
+  padding: 0.875rem 2rem;
+  background: #DC2626;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnDanger:hover {
+  background: #B91C1C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
+}
+
+.btnDanger:active {
+  transform: translateY(0);
+}
+
+/* Confirmar */
+.btnSuccess {
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 12px rgba(37, 99, 235, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btnSuccess:hover {
+  background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 20px rgba(37, 99, 235, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.btnSuccess:active {
+  transform: translateY(0);
+}
+
+/*  ESTADO VACÍO */
+.empty {
+  max-width: 500px;
+  margin: 4rem auto;
+  text-align: center;
+  background: #FFFFFF;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.emptyMessage {
+  font-size: 1.1rem;
+  color: #64748B;
+  margin: 1.5rem 0 2rem;
+}
+
+.btnPrimary {
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+  background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+  transform: translateY(-2px);
+}
+
+/* ANIMACIÓN DE ENTRADA */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.turnoCard {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.turnoCard:nth-child(1) { animation-delay: 0.05s; }
+.turnoCard:nth-child(2) { animation-delay: 0.1s; }
+.turnoCard:nth-child(3) { animation-delay: 0.15s; }

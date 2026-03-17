@@ -33,6 +33,21 @@
   margin-bottom: 4px;
 }
 
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+}
+
 .specialty {
   font-size: 14px;
   opacity: 0.9;
