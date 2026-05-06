@@ -5,6 +5,8 @@ import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [openCategory, setOpenCategory] = useState(null);
 
   const menuCategories = [
     {
@@ -52,6 +54,7 @@ const NavBar = () => {
           <span>MediTurnos</span>
         </Link>
 
+        {/* 🖥️ MENU DESKTOP */}
         <div className={styles.menu}>
           {menuCategories.map((category) => (
             <div
@@ -71,7 +74,6 @@ const NavBar = () => {
                       key={specialty.id}
                       to={`/category/${specialty.id}`}
                       className={styles.dropdownItem}
-                      onClick={() => setOpenDropdown(null)}
                     >
                       {specialty.name}
                     </Link>
@@ -81,8 +83,51 @@ const NavBar = () => {
             </div>
           ))}
         </div>
-      <CartWidget/>
+
+        {/* 🍔 HAMBURGUESA */}
+        <button
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+
+        <CartWidget />
       </div>
+
+      {/* 📱 MENU MOBILE */}
+      {menuOpen && (
+        <div className={styles.mobileMenu}>
+          {menuCategories.map((category) => (
+            <div key={category.id} className={styles.mobileCategory}>
+
+              <button
+                className={styles.mobileTitle}
+                onClick={() =>
+                  setOpenCategory(openCategory === category.id ? null : category.id)
+                }
+              >
+                {category.title}
+              </button>
+
+              {openCategory === category.id && (
+                <div className={styles.mobileDropdown}>
+                  {category.specialties.map((specialty) => (
+                    <Link
+                      key={specialty.id}
+                      to={`/category/${specialty.id}`}
+                      className={styles.mobileItem}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {specialty.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };

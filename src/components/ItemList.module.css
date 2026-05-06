@@ -121,3 +121,37 @@
   opacity: 0.9;
   transform: scale(1.02);
 }
+
+
+@media (max-width: 1024px) {
+  .wrapper {
+    gap: 30px;
+    padding: 50px 20px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: 1fr; /* 1 sola columna */
+    gap: 20px;
+    padding: 40px 16px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .header {
+    padding: 20px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .image {
+    width: 70px;
+    height: 70px;
+  }
+}

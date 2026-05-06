@@ -15,28 +15,28 @@ const ItemListContainer = () => {
     setLoading(true);
 
     const medicosCollection = categoryId
-    ? query(
-      collection(db, "medicos"),
-      where("category", "==", categoryId)
-    )
-    : collection(db, "medicos");
+      ? query(
+        collection(db, "medicos"),
+        where("category", "==", categoryId)
+      )
+      : collection(db, "medicos");
     getDocs(medicosCollection)
-    .then((res)=>{
-      const list = res.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+      .then((res) => {
+        const list = res.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
 
-      setMedicos(list);
-    })
+        setMedicos(list);
+      })
 
-    .catch((error) => {
-      console.error("Error al traer medicos", error);
-    })
-    .finally(()=>{
-      setLoading(false);
-    });
-   
+      .catch((error) => {
+        console.error("Error al traer medicos", error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+
   }, [categoryId]);
 
   if (loading) {
@@ -65,23 +65,22 @@ const ItemListContainer = () => {
         </div>
       </div>
     );
-  } 
+  }
 
 
   return (
 
-   
-    <div className={styles.wrapper}>
-     
+
+    <div id= "medicos-section" className={styles.wrapper}>
+
 
       <div className={styles.inner}>
         <div className={styles.header}>
           <h1 className={styles.title}>
             {categoryId
-              ? `Especialidad: ${
-                  categoryId.charAt(0).toUpperCase() +
-                  categoryId.slice(1)
-                }`
+              ? `Especialidad: ${categoryId.charAt(0).toUpperCase() +
+              categoryId.slice(1)
+              }`
               : "Todos los Profesionales"}
           </h1>
 

@@ -6,6 +6,7 @@ import NotFound from './components/NotFound';
 import { CartProvider } from './context/CartContext';
 import TurnosView from './components/TurnosView';
 import Checkout from './components/CheckOut';
+import HeroSection from './components/HeroSection';
 
 function App() {
   return (
@@ -18,7 +19,10 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<ItemListContainer />}
+            element={<>
+              <HeroSection />
+              <ItemListContainer />
+            </>}
           />
 
 
@@ -41,9 +45,9 @@ function App() {
             path="/mis-turnos"
             element={<TurnosView />}
           />
-          <Route 
-          path="/confirmar-turnos" 
-          element={<Checkout />} 
+          <Route
+            path="/confirmar-turnos"
+            element={<Checkout />}
           />
         </Routes>
 
