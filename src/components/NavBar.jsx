@@ -54,7 +54,6 @@ const NavBar = () => {
           <span>MediTurnos</span>
         </Link>
 
-        {/* 🖥️ MENU DESKTOP */}
         <div className={styles.menu}>
           {menuCategories.map((category) => (
             <div
@@ -84,7 +83,6 @@ const NavBar = () => {
           ))}
         </div>
 
-        {/* 🍔 HAMBURGUESA */}
         <button
           className={styles.hamburger}
           onClick={() => setMenuOpen(!menuOpen)}
