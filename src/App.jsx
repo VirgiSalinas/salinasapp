@@ -5,7 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import NotFound from './components/NotFound';
 import { CartProvider } from './context/CartContext';
 import TurnosView from './components/TurnosView';
-import CheckOut from './components/CheckOut';
+import Checkout from './components/Checkout';
 import HeroSection from './components/HeroSection';
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
           />
           <Route
             path="/confirmar-turnos"
-            element={<CheckOut />}
+            element={<Checkout />}
           />
         </Routes>
 

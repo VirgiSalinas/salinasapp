@@ -5,7 +5,7 @@ import {db} from '../service/firebase';
 import { Link } from 'react-router-dom';
 import styles from './Checkout.module.css';
 
-const CheckOut = () => {
+const Checkout = () => {
   const [paciente, setPaciente] = useState({});
   const [validDni, setValidDni] = useState('');
   const [orderId, setOrderId] = useState('');
@@ -190,4 +190,4 @@ const CheckOut = () => {
   );
 };
 
-export default CheckOut;
+export default Checkout;

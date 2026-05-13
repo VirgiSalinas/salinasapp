@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import Checkout from "../components/CheckOut";
+import Checkout from "../components/Checkout";
 
 export const CartContext = createContext();
 
